@@ -132,7 +132,7 @@ class PlayVideoFrom {
   }
 
   factory PlayVideoFrom.primeVideo(
-    Map<String, String> dataSource, {
+    String dataSource, {
     bool live = false,
     VideoFormat? formatHint,
     Future<ClosedCaptionFile>? closedCaptionFile,
@@ -142,7 +142,7 @@ class PlayVideoFrom {
     return PlayVideoFrom._(
       live: live,
       playerType: PodVideoPlayerType.primeVideo,
-      dataSource: jsonEncode(dataSource),
+      dataSource: dataSource,
       formatHint: formatHint,
       closedCaptionFile: closedCaptionFile,
       videoPlayerOptions: videoPlayerOptions,

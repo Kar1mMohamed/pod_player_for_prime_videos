@@ -41,7 +41,7 @@ class _MobileBottomSheet extends StatelessWidget {
             _bottomSheetTiles(
               title: podCtr.podPlayerLabels.quality,
               icon: Icons.video_settings_rounded,
-              subText: podCtr.primeVideoHandlersUrls.keys.first,
+              subText: podCtr.currentPrimeVideoQuality ?? '',
               onTap: () {
                 Navigator.of(context).pop();
                 Timer(const Duration(milliseconds: 100), () {

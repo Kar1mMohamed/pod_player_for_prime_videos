@@ -168,6 +168,7 @@ class _PodVideoQualityController extends _PodVideoController {
     }
     if (primeVideoHandlersUrls.isNotEmpty && primeVideoQuality != null) {
       if (primeVideoHandlersUrls.containsKey(primeVideoQuality)) {
+        // print('primeVideoQuality: $primeVideoQuality');
         final downloadUrlQuality = await getDownloadUrlFromPrimeVideo(
           primeVideoHandlersUrls[primeVideoQuality]!,
         );

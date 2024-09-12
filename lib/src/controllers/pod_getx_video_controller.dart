@@ -151,7 +151,9 @@ class PodGetXVideoController extends _PodGesturesController {
         playingVideoUrl = url;
 
       case PodVideoPlayerType.primeVideo:
-        final handlersUrls = jsonDecode(playVideoFrom.dataSource!) as Map;
+        final urls = await read(Uri.parse(playVideoFrom.dataSource!));
+
+        final handlersUrls = (jsonDecode(urls)['data']) as Map;
 
         final url = await getUrlFromVideoQualitiesUrlsPrimeVideo(
           videoUrls: Map.from(handlersUrls),
